@@ -1,0 +1,25 @@
+from pydantic_settings import BaseSettings
+from pathlib import Path
+
+
+class Settings(BaseSettings):
+    database_url: str = "sqlite+aiosqlite:///./velocity_alerts.db"
+    openai_api_key: str = ""
+    instagram_session_id: str = ""
+    firebase_credentials_path: str = ""
+
+    polling_interval_minutes: int = 30
+    velocity_spike_threshold: float = 2.5
+    alert_cooldown_hours: int = 6
+
+    # How many hours of data to consider "recent" for velocity calc
+    velocity_window_hours: int = 6
+    # Minimum views before a post is worth tracking
+    min_views_threshold: int = 1000
+    # How many historical posts to use for baseline
+    baseline_post_count: int = 20
+
+    model_config = {"env_file": ".env", "extra": "ignore"}
+
+
+settings = Settings()
