@@ -412,17 +412,8 @@ export default function App() {
       {/* Header */}
       <header className="sticky top-0 z-50 bg-[#08080d]/80 backdrop-blur-2xl border-b border-white/[0.04]">
         <div className="max-w-[1200px] mx-auto px-6 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="relative">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-indigo-500 to-violet-600 flex items-center justify-center shadow-lg shadow-indigo-500/20">
-                <Radar size={16} className="text-white" />
-              </div>
-              <div className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-green-400 border-2 border-[#08080d]" />
-            </div>
-            <div>
-              <h1 className="text-[15px] font-bold tracking-tight">Stanley</h1>
-              <p className="text-[10px] text-white/25 font-medium tracking-wide">VELOCITY ALERTS</p>
-            </div>
+          <div className="flex items-center gap-2">
+            <h1 className="text-[15px] font-bold tracking-tight">Velocity Alerts</h1>
           </div>
 
           <div className="flex items-center gap-4">
@@ -522,7 +513,7 @@ export default function App() {
       {/* Footer */}
       <footer className="mt-12 border-t border-white/[0.03] py-6">
         <p className="text-center text-[11px] text-white/15">
-          Stanley Velocity Alerts · Tracking {DEMO_FEED.length} posts across 3 creators · Spike threshold: 2.5x
+          Velocity Alerts · Tracking {DEMO_FEED.length} posts across 3 creators · Spike threshold: 2.5x
         </p>
       </footer>
     </div>
